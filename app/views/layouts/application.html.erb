@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <title>PlayBox - <%= title %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <%= favicon_link_tag 'ui/favicon.ico' %>
+    <%= stylesheet_link_tag "application" %>
+  </head>
+  <body class="<%= controller.controller_name %> <%= controller.action_name %>">
+    <ul id="access">
+      <li><a href="#content">Aller au contenu</a></li>
+      <li><a href="#sidebar">Aller au menu</a></li>
+    </ul>
+    <hr/>
+    <div id="header">
+      <div>
+        <ul id="menu">
+          <li><%= link_to t(".dashboard"), dashboard_path %></li>
+          <li><a href="#"><%= t(".help") %></a></li>
+        </ul>
+      </div>
+    </div>
+    <hr/>
+    <div id="frame">
+      <%= flash_tag(flash) %>
+
+      <div id="content">
+        <%= yield %>
+      </div>
+      <hr/>
+      <div id="sidebar">
+        <h2>PlayBox<sup>beta</sup></h2>
+
+        <ul>
+          <li><%= link_to Ssh.model_name.human, ssh_path %></li>
+          <li><%= link_to Log.model_name.human, log_path %></li>
+          <li><%= link_to SavePoint.model_name.human, new_save_point_path %></li>
+          <li><%= link_to Box::Release.model_name.human, releases_path %></li>
+        </ul>
+
+        <p class="languages">
+          <%= links_to_languages %>
+        </p>
+
+        <h2><%= t(".information.title") %></h2>
+        <p>
+          <%= t(".information.text").html_safe %>
+        </p>
+
+      </div>
+    </div>
+    <hr/>
+    <div id="footer">
+      <div>
+        &nbsp;
+      </div>
+    </div>
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>
