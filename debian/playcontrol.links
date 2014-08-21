@@ -1,0 +1,3 @@
+var/log/playcontrol usr/share/playcontrol/log
+etc/playcontrol/database.yml usr/share/playcontrol/config/database.yml
+etc/playcontrol/production.rb usr/share/playcontrol/config/environments/production.rb

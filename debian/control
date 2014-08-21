@@ -10,7 +10,6 @@ Package: playcontrol
 Architecture: all
 Depends: ruby1.9.1 (>= 1.9.3)
 Recommends: libapache2-mod-passenger
-Description: Web interface to manage audio streams created with a
- PlayBox system
+Description: Web interface to manage audio played with a PlayBox system
  .
  See <http://projects.tryphon.eu/projects/playbox/> for more info.

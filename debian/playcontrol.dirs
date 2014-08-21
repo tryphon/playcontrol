@@ -1,0 +1,5 @@
+etc/playcontrol
+usr/share/playcontrol
+var/lib/playcontrol
+var/log/playcontrol
+usr/bin

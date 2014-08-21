@@ -12,7 +12,7 @@ build:
 	rm -f config/database.yml
 
 install:
-	cp -a app bin script public vendor config lib db ${DESTDIR}usr/share/playcontrol
+	cp -a app script public vendor config lib db ${DESTDIR}usr/share/playcontrol
 	cp -a Rakefile config.ru Gemfile Gemfile.lock .bundle ${DESTDIR}usr/share/playcontrol
 	rm -f ${DESTDIR}usr/share/playcontrol/config/environments/production.rb
 	cp debian/database.yml debian/production.rb debian/apache2.conf ${DESTDIR}etc/playcontrol/
